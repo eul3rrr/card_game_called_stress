@@ -22,7 +22,7 @@ def simulate_games(num_simulations):
     averages = {col: df[col].mean() if df[col].dtype != 'object' else 'Average' for col in df.columns}
     df = pd.concat([df, pd.DataFrame([averages])], ignore_index=True)
 
-    df.to_csv("simulation_results.csv", index=False)
+    df.to_csv("data/simulation_results1.csv", index=False)
     print("Simulation completed. Results saved to 'simulation_results.csv'.")
     return df
 
